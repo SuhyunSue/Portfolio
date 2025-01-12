@@ -1,0 +1,45 @@
+html, body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    height: 100%; /* 부모 요소가 높이를 채우도록 */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* 로고와 링크 사이 공간 배분 */
+    align-items: center; /* 수직 정렬 */
+    padding: 10px 20px; /* 네비게이션 바의 여백 */
+    background-color: #ffe0e0; /* 배경색 */
+}
+
+/* 네비게이션 링크 스타일 */
+.nav-link {
+    display: flex; /* 가로 정렬 */
+    list-style: none; /* 기본 목록 스타일 제거 */
+    margin: 0;
+    padding: 0;
+}
+
+/* 각 링크의 스타일 */
+.nav-link li {
+    margin: 0 15px; /* 링크 간 간격 */
+}
+
+.nav-link a, .logo a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: #333; /* 텍스트 색상 */
+    font-size: 18px;
+    transition: color 0.3s ease; /* 색상 변경 효과 */
+}
+
+.nav-link a:hover,
+.logo a:hover {
+    color: #ffffff; /* 마우스 올렸을 때 색상 변경 */
+}
+
+
+footer
+{
+    text-align: center;
+}

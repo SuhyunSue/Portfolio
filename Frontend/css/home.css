@@ -1,0 +1,195 @@
+html, body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    height: 100%; /* 부모 요소가 높이를 채우도록 */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* 로고와 링크 사이 공간 배분 */
+    align-items: center; /* 수직 정렬 */
+    padding: 10px 20px; /* 네비게이션 바의 여백 */
+    background-color: #ffe0e0; /* 배경색 */
+}
+
+/* 네비게이션 링크 스타일 */
+.nav-link {
+    display: flex; /* 가로 정렬 */
+    list-style: none; /* 기본 목록 스타일 제거 */
+    margin: 0;
+    padding: 0;
+}
+
+/* 각 링크의 스타일 */
+.nav-link li {
+    margin: 0 15px; /* 링크 간 간격 */
+}
+
+.nav-link a, .logo a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: #333; /* 텍스트 색상 */
+    font-size: 18px;
+    transition: color 0.3s ease; /* 색상 변경 효과 */
+}
+
+.nav-link a:hover, .logo a:hover {
+    color: #ffffff; /* 마우스 올렸을 때 색상 변경 */
+}
+
+/* 클릭 후 색상이 변하지 않도록 설정 */
+.nav-link a:active,
+.logo a:active {
+    color: #333; /* 원래 색상으로 유지 */
+}
+
+
+/* main page , under the nav bar*/
+.main-emoji
+{
+    display: flex;
+    flex-direction: row; /* 가로로 나뉘도록 설정 */
+    height: calc(80vh - 60px); /* 화면 높이에서 navbar 높이를 제외한 값 */
+    margin-left: 20%;
+}
+
+.right-emoji, .left-intro {
+    flex: 1; /* 같은 비율로 공간 나눔 */
+    display: flex; /* 내부 콘텐츠 정렬을 위한 설정 */
+    flex-direction: column; /* 텍스트 또는 이미지가 세로로 쌓임 */
+    align-items: center; /* 가로 방향 중앙 정렬 */
+    justify-content: center; /* 세로 방향 중앙 정렬 */
+}
+
+.right-emoji img {
+    max-width: 100%; /* 이미지 크기를 부모 크기에 맞게 */
+    max-height: 80%; /* 너무 커지지 않도록 높이 제한 */
+    object-fit: contain; /* 이미지 비율 유지 */
+}
+
+.left-intro
+{
+    font-family: 'Roboto Mono', monospace;
+    text-align: left;
+}
+
+/* slide text */
+.container 
+{
+    font-size: 30px;
+    font-family: 'Roboto Mono', monospace;
+    text-shadow: 2px 2px 4px    rgba(79, 79, 79, 0.3); /* 텍스트 그림자 */
+    width: 300px;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+.slide-text 
+{
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    animation: slide 9s infinite;
+    text-align: center; /* 슬라이드 텍스트 중앙 정렬 */
+}
+
+.slide-text:nth-child(1) 
+{
+    animation-delay: 0s;
+}
+
+.slide-text:nth-child(2) 
+{
+    animation-delay: 3s;
+}
+
+.slide-text:nth-child(3) 
+{
+    animation-delay: 6s;
+}
+
+@keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    10% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    33% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    36% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+}
+
+/* slide emoji */
+.right-emoji 
+{
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide-image
+{
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    animation: slide 9s infinite;
+}
+
+.slide-image:nth-child(1) 
+{
+    animation-delay: 0s;
+}
+
+.slide-image:nth-child(2) 
+{
+    animation-delay: 3s;
+}
+
+.slide-image:nth-child(3) 
+{
+    animation-delay: 6s;
+}
+
+@keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    10% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    33% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    36% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+}
+
+
+footer
+{
+    text-align: center;
+}
