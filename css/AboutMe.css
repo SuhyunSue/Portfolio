@@ -45,7 +45,6 @@ html, body {
     margin-top: 100px;
     margin-left: 100px;
     margin-right: 100px;
-    margin-bottom: 100px;
     font-size: x-large;
 }
 
@@ -61,7 +60,33 @@ html, body {
     color: #333; /* 텍스트 색상 */
 }
 
+.link-for-resume
+{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.link-for-resume a {
+    text-decoration: none; /* 밑줄 제거 */
+    display: inline-block; /* 이미지를 블록 요소처럼 취급 */
+    margin: 0 10px; /* 링크 사이 간격 조정 */
+}
+
+.link-for-resume a img
+{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+h1
+{
+    font-size: medium;
+}
+
 footer
 {
     text-align: center;
+    margin-top: 50px;
 }
